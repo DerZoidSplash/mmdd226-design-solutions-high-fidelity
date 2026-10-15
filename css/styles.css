@@ -137,12 +137,36 @@ body {
   margin-bottom: 28px;
 }
 
-.byo-card-link,
+.byo-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  width: 50%;
+  transition: transform 0.2s ease;
+}
+
 .bowl-card-link {
   text-decoration: none;
   color: inherit;
   display: block;
+  transition: transform 0.2s ease;
 }
+
+.byo-card-link:hover,
+.bowl-card-link:hover {
+  transform: translateY(-3px);
+}
+
+.byo-card-link:hover .bowl-name,
+.bowl-card-link:hover .bowl-name {
+  text-decoration: underline;
+}
+
+.byo-card-link:hover .bowl-img-wrapper,
+.bowl-card-link:hover .bowl-img-wrapper {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
 
 /* Placeholder Box with X */
 .placeholder-box {
@@ -181,7 +205,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  width: 50%;
+  width: 100%;
 }
 
 .lorem-text {
